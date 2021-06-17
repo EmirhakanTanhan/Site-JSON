@@ -4,7 +4,8 @@
   "description": "RESTful API for experiment purposes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,10 @@
   "bugs": {
     "url": "https://github.com/EmirhakanTanhan/Site-JSON/issues"
   },
-  "homepage": "https://github.com/EmirhakanTanhan/Site-JSON#readme",
+  "engines": {
+    "node": "14.15.0"
+  },
+  "homepage": "http://json.emirhakan.com",
   "dependencies": {
     "express": "^4.17.1"
   }
