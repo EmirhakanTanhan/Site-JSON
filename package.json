@@ -1,0 +1,22 @@
+{
+  "name": "site-json",
+  "version": "1.0.0",
+  "description": "RESTful API for experiment purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmirhakanTanhan/Site-JSON.git"
+  },
+  "author": "Emirhakan Tanhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmirhakanTanhan/Site-JSON/issues"
+  },
+  "homepage": "https://github.com/EmirhakanTanhan/Site-JSON#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
