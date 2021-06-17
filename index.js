@@ -29,7 +29,12 @@ app.post('/api/products', (req, res) => {
 
 //update a product
 app.put('/api/products/:id', (req, res) => {
+    const product = products.find(c => c.id === req.params.productId);
+    if (!product) res.status(404).send('Product could\'t found.');
 
+    let updatedLike = parseInt(product['params']['likeCount']) + 1;
+    product['params']['likeCount'] = updatedLike.toString();
+    res.send(product);
 });
 
 const port = process.env.PORT || 3000;
