@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -16,15 +14,15 @@ app.get('/api/products', (req, res) => {
 
 //get the product with the given id
 app.get('/api/products/:id', (req, res) => {
-    const product = products.find(c => c.id === req.params.productId);
+    const product = products.find(c => c.productId === req.params.id);
     if (!product) res.status(404).send('Product could\'t found.');
-    res.send(product);
+    else res.send(product);
 });
 
 //add a product
 app.post('/api/products', (req, res) => {
     const product = {
-        id: "deneme"+products.length+1,
+        id: "deneme" + products.length + 1,
         name: req.body.name,
     };
     products.push(product);
@@ -33,7 +31,7 @@ app.post('/api/products', (req, res) => {
 
 //update a product
 app.put('/api/products/:id', (req, res) => {
-    const product = products.find(c => c.id === req.params.productId);
+    const product = products.find(c => c.productId === req.params.id);
     if (!product) res.status(404).send('Product could\'t found.');
 
     let updatedLike = parseInt(product['params']['likeCount']) + 1;
